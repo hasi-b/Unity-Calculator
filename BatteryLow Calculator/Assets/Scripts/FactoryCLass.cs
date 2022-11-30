@@ -5,7 +5,7 @@ using UnityEngine;
 public class FactoryCLass : MonoBehaviour
 {
     // Start is called before the first frame update
-    public AbstractOperation GetOperation<T>(string operate, T left, T right)
+    public AbstractOperation GetOperation(string operate)
     {
 
         switch (operate)

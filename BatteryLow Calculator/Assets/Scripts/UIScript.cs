@@ -13,7 +13,13 @@ public class UIScript : MonoBehaviour
     double result = 0;
     string res = "";
     string op = "";
+
     
+    
+    
+
+
+   
     // Start is called before the first frame update
     public void OnClickNumber(int val)
     {
