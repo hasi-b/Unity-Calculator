@@ -1,25 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Calculation : MonoBehaviour
 {
+
+    public bool isActive=false;
+    public GameObject UI;
+   
+    public string operatorComplex;
+    
+    
+
     // Start is called before the first frame update
-    void Start()
+    
+
+
+    public double complexCalculation(double x,double y)
     {
 
-
-        int n;
+        double n;
         FactoryCLass fc = new FactoryCLass();
-        AbstractOperation absOperation = fc.GetOperation("+");
-        n = absOperation.Operate(5, 6);
-        Debug.Log("Value of n: " + n);
+        AbstractOperation absOperation = fc.GetOperation(operatorComplex);//choosing the type of  instance to create of the abstract class
+        n = absOperation.Operate(x,y);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        return n;
         
+
+
     }
+
+
+   
+    
 }
